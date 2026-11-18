@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Beginner AWS Cloud Internship project using S3, API Gateway and Lambda.">
+<title>AWS Cloud Internship | Build. Deploy. Innovate.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+<a class="brand" href="#home"><span class="aws">aws<small>⌣</small></span><i></i><b>Cloud Internship</b></a>
+<button class="menu" id="menu" aria-label="Toggle menu">☰</button>
+<nav id="nav"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#architecture">Architecture</a><a href="#contact">Contact</a></nav>
+<a class="top-btn" href="#services">☁ Learn AWS →</a>
+</header>
+<main>
+<section class="hero" id="home">
+<div class="hero-text"><span class="eyebrow">● BEGINNER CLOUD PROJECT</span><h1><em>AWS</em> Cloud<br>Internship</h1><h2>Build <b>•</b> Deploy <b>•</b> Innovate</h2>
+<p>Explore the power of AWS and learn how cloud technology builds a smarter, more connected world.</p>
+<div class="actions"><a class="btn orange" href="#about">🚀 Get Started →</a><a class="btn outline" href="#contact">✉ Contact Us</a></div>
+<div class="tags">✓ S3 Static Hosting　 ✓ Serverless Lambda　 ✓ Beginner Friendly</div></div>
+<div class="hero-art"><img src="assets/cloud-hero.png" alt="Glowing cloud computing and server illustration"><span class="float s3">▣ <b>Amazon S3</b><small>Static hosting</small></span><span class="float lam">λ <b>AWS Lambda</b><small>Serverless function</small></span><span class="float api">⌘ <b>API Gateway</b><small>HTTPS endpoint</small></span></div>
+</section>
+<section class="section services" id="services"><div class="heading"><span class="eyebrow dark">CLOUD BUILDING BLOCKS</span><h2>Our AWS Features</h2><i></i><p>Simple, scalable services that power this beginner cloud workflow.</p></div>
+<div class="cards">
+<article><span class="icon green">▣</span><div><h3>Amazon S3</h3><p>Store and host your website files securely and reliably.</p><small>Object storage</small></div></article>
+<article><span class="icon amber">λ</span><div><h3>AWS Lambda</h3><p>Run backend code without managing servers.</p><small>Serverless compute</small></div></article>
+<article><span class="icon violet">⌘</span><div><h3>API Gateway</h3><p>Connect your frontend form to Lambda using HTTPS.</p><small>API management</small></div></article>
+<article><span class="icon blue">✓</span><div><h3>Secure & Scalable</h3><p>Use validation, access controls and cost-aware settings.</p><small>Cloud best practices</small></div></article>
+</div></section>
+<section class="section about" id="about"><div><span class="eyebrow dark">THE INTERNSHIP PROJECT</span><h2>About This Project</h2><i class="line"></i><p>This website demonstrates the AWS Cloud Internship beginner task: deploy a static frontend on Amazon S3 and connect a feedback form to a serverless backend using AWS Lambda.</p>
+<ul><li>Static website hosting with Amazon S3</li><li>Contact form with input validation</li><li>Serverless processing using AWS Lambda</li><li>HTTPS endpoint using API Gateway</li><li>Low-traffic and cost-conscious deployment</li></ul></div>
+<div class="architecture" id="architecture"><div class="arch-head">🟢 Request flow <span>BEGINNER LEVEL</span></div><div class="flow"><div class="node">🌐<b>Visitor</b><small>Website form</small></div><strong>→</strong><div class="node">▣<b>Amazon S3</b><small>HTML / CSS / JS</small></div></div><p class="down">↓ Form request</p><div class="flow"><div class="node">⌘<b>API Gateway</b><small>HTTPS endpoint</small></div><strong>→</strong><div class="node">λ<b>AWS Lambda</b><small>Validate & process</small></div></div><div class="arch-note">✓ Serverless workflow · No server to manage</div></div></section>
+<section class="section contact" id="contact"><div class="contact-copy"><span class="eyebrow">LET'S CONNECT</span><h2>Have a question?</h2><p>Send a message through this demo form. Add your API Gateway URL after deployment to activate the Lambda workflow.</p><p>✉ <b>Feedback & inquiries</b><br><small>We appreciate your feedback.</small></p><p>☁ <b>Cloud-powered workflow</b><br><small>S3 + API Gateway + Lambda</small></p></div>
+<form id="contactForm"><div class="form-title"><span>➤</span><div><h3>Contact Us</h3><small>Have feedback or questions? Reach out!</small></div></div><div class="row"><input id="name" placeholder="Your name" maxlength="80" required><input id="email" type="email" placeholder="Your email" maxlength="120" required></div><textarea id="message" placeholder="Your message..." rows="4" maxlength="1000" required></textarea><button class="btn orange" id="submit" type="submit">➤ Send Message</button><p id="status" aria-live="polite"></p><small class="demo">Demo mode until you add your API Gateway URL in script.js.</small></form></section>
+</main><footer><span class="aws">aws<small>⌣</small></span><span>Powered by Amazon Web Services</span><b>☁ Learn. Build. Grow.</b><small>© 2026 AWS Cloud Internship Demo</small></footer>
+<script src="script.js"></script>
+</body></html>

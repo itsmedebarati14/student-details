@@ -1,0 +1,717 @@
+
+/* =========================
+   1. GLOBAL RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    color: #10234b;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   2. HEADER & NAVIGATION
+========================= */
+
+.header {
+    height: 76px;
+    background: #07152f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    border-bottom: 1px solid #24416b;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.aws {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.aws small {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    color: #ff9900;
+    font-size: 25px;
+}
+
+.brand i {
+    height: 35px;
+    border-left: 1px solid #8291ac;
+}
+
+.brand b {
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+}
+
+nav a {
+    font-size: 13px;
+    padding: 10px 13px;
+    border-radius: 8px;
+    color: #dce8ff;
+}
+
+nav a:hover {
+    background: #1269e9;
+}
+
+.top-btn {
+    background: #152d61;
+    border: 1px solid #4266a9;
+    border-radius: 25px;
+    padding: 10px 17px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.menu {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 25px;
+}
+
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+    min-height: 510px;
+    background: radial-gradient(
+        ellipse at 75%,
+        #0c4a9d,
+        #071d48 48%,
+        #06132e 80%
+    );
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 55px 5%;
+    overflow: hidden;
+}
+
+.hero-text {
+    z-index: 2;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #85bdff;
+    font-weight: 800;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 5.5vw, 72px);
+    line-height: 1.08;
+    letter-spacing: -3px;
+    margin: 14px 0;
+}
+
+.hero h1 em {
+    font-style: normal;
+    color: #ff9900;
+}
+
+.hero h2 {
+    font-size: 27px;
+}
+
+.hero h2 b {
+    color: #ff9900;
+    padding: 0 7px;
+}
+
+.hero-text > p {
+    max-width: 520px;
+    color: #d5e5ff;
+    margin: 17px 0 25px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   4. BUTTONS
+========================= */
+
+.btn {
+    border: 0;
+    border-radius: 30px;
+    padding: 13px 22px;
+    font-weight: 800;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.orange {
+    background: linear-gradient(135deg, #ffb21b, #ff8a00);
+    color: #14203a;
+}
+
+.outline {
+    border: 1px solid #9cb8e9;
+    color: white;
+}
+
+
+/* =========================
+   5. HERO TAGS & IMAGE
+========================= */
+
+.tags {
+    font-size: 11px;
+    color: #b9d2f9;
+    margin-top: 23px;
+}
+
+.hero-art {
+    position: relative;
+}
+
+.hero-art img {
+    width: 100%;
+    border-radius: 20px;
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 10px 25px #007bff55);
+}
+
+.float {
+    position: absolute;
+    background: #0c2459e8;
+    border: 1px solid #4a8dff88;
+    border-radius: 10px;
+    padding: 9px 12px;
+    font-size: 14px;
+    box-shadow: 0 8px 22px #0004;
+}
+
+.float b,
+.float small {
+    display: block;
+}
+
+.float small {
+    font-size: 10px;
+    color: #a9c7ed;
+}
+
+.s3 {
+    top: 4%;
+    left: 0;
+    color: #8bf2a9;
+}
+
+.lam {
+    top: 5%;
+    right: 0;
+    color: #ffad32;
+}
+
+.api {
+    bottom: 5%;
+    right: 2%;
+    color: #b8a1ff;
+}
+
+
+/* =========================
+   6. COMMON SECTION
+========================= */
+
+.section {
+    padding: 68px 5%;
+}
+
+.services {
+    background: #f3f7fd;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.dark {
+    color: #3c7bc5;
+}
+
+.heading h2,
+.about h2 {
+    font-size: clamp(28px, 3vw, 38px);
+    letter-spacing: -1px;
+}
+
+.heading i,
+.line {
+    display: block;
+    width: 78px;
+    height: 4px;
+    background: #ff9900;
+    margin: 12px auto;
+}
+
+.heading p {
+    color: #66748e;
+    font-size: 14px;
+}
+
+
+/* =========================
+   7. SERVICE CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.cards article {
+    display: flex;
+    gap: 14px;
+    background: white;
+    padding: 22px 17px;
+    border: 1px solid #e2ebf8;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px #163b7008;
+}
+
+.icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.green {
+    background: #e2f7e9;
+    color: #17883c;
+}
+
+.amber {
+    background: #fff0dc;
+    color: #e88800;
+}
+
+.violet {
+    background: #eee8ff;
+    color: #7244e8;
+}
+
+.blue {
+    background: #e3f0ff;
+    color: #1269e9;
+}
+
+.cards h3 {
+    font-size: 15px;
+    margin: 3px 0;
+}
+
+.cards p {
+    font-size: 12px;
+    color: #596985;
+}
+
+.cards small {
+    display: inline-block;
+    color: #3175c7;
+    background: #eef6ff;
+    padding: 3px 8px;
+    border-radius: 20px;
+    margin-top: 8px;
+    font-size: 10px;
+}
+
+
+/* =========================
+   8. ABOUT SECTION
+========================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.line {
+    margin: 12px 0;
+}
+
+.about p {
+    font-size: 14px;
+    color: #52617c;
+    margin: 18px 0;
+}
+
+.about ul {
+    list-style: none;
+    display: grid;
+    gap: 9px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.about li:before {
+    content: "✓";
+    color: #16934a;
+    background: #e3f8e9;
+    border-radius: 50%;
+    padding: 2px 6px;
+    margin-right: 9px;
+}
+
+
+/* =========================
+   9. ARCHITECTURE SECTION
+========================= */
+
+.architecture {
+    background: linear-gradient(145deg, #0b1b40, #112c60);
+    color: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 20px 40px #0b245220;
+}
+
+.arch-head {
+    font-size: 12px;
+    color: #c2d2ed;
+    margin-bottom: 22px;
+}
+
+.arch-head span {
+    float: right;
+    font-size: 9px;
+    letter-spacing: 1px;
+    background: #1b4278;
+    padding: 5px 8px;
+    border-radius: 20px;
+}
+
+.flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.node {
+    width: 43%;
+    padding: 15px 8px;
+    text-align: center;
+    background: #17366b;
+    border: 1px solid #3864a1;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 22px;
+}
+
+.node b {
+    font-size: 13px;
+}
+
+.node small {
+    font-size: 10px;
+    color: #aac5ed;
+}
+
+.flow > strong {
+    color: #75baff;
+}
+
+.down {
+    text-align: center;
+    color: #ffb52c;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.arch-note {
+    background: #0a2048;
+    border: 1px solid #244e80;
+    border-radius: 9px;
+    padding: 12px;
+    margin-top: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: #b9d4f4;
+}
+
+
+/* =========================
+   10. CONTACT SECTION
+========================= */
+
+.contact {
+    background: linear-gradient(135deg, #081630, #102c60);
+    color: white;
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.contact h2 {
+    font-size: 40px;
+}
+
+.contact-copy > p {
+    color: #b8c9e5;
+    font-size: 13px;
+    margin: 17px 0;
+}
+
+.contact-copy small {
+    color: #a8bddc;
+}
+
+
+/* =========================
+   11. CONTACT FORM
+========================= */
+
+.contact form {
+    background: #102653;
+    border: 1px solid #2a4c83;
+    border-radius: 17px;
+    padding: 24px;
+}
+
+.form-title {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.form-title > span {
+    font-size: 23px;
+    background: #174fa4;
+    border-radius: 10px;
+    padding: 8px 13px;
+}
+
+.form-title h3 {
+    font-size: 21px;
+}
+
+.form-title small {
+    font-size: 11px;
+    color: #b4c7e4;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    background: #1b3768;
+    border: 1px solid #426397;
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+    font: inherit;
+    font-size: 13px;
+    margin-bottom: 11px;
+    outline: none;
+}
+
+.contact textarea {
+    resize: vertical;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: #b5c8e5;
+}
+
+.contact form .btn {
+    width: 100%;
+    border-radius: 9px;
+}
+
+.contact #status {
+    font-size: 12px;
+    min-height: 18px;
+    margin-top: 8px;
+}
+
+.demo {
+    font-size: 10px;
+    color: #a5badb;
+}
+
+
+/* =========================
+   12. FOOTER
+========================= */
+
+footer {
+    background: #06132b;
+    color: #b7c8e4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px 5%;
+    font-size: 11px;
+}
+
+footer .aws {
+    font-size: 25px;
+}
+
+footer b {
+    color: #dbe8ff;
+}
+
+
+/* =========================
+   13. RESPONSIVE DESIGN
+   TABLET VIEW
+========================= */
+
+@media (max-width: 1000px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav a {
+        padding: 8px;
+    }
+}
+
+
+/* =========================
+   14. RESPONSIVE DESIGN
+   MOBILE VIEW
+========================= */
+
+@media (max-width: 760px) {
+
+    .header {
+        height: 67px;
+    }
+
+    .menu {
+        display: block;
+        margin-left: auto;
+        margin-right: 12px;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 67px;
+        left: 0;
+        right: 0;
+        background: #081a39;
+        padding: 12px 5%;
+        flex-direction: column;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .top-btn {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 6% 30px;
+    }
+
+    .hero h1 {
+        font-size: 51px;
+    }
+
+    .hero-art {
+        margin-top: 25px;
+    }
+
+    .section {
+        padding: 50px 6%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer small {
+        width: 100%;
+    }
+}
